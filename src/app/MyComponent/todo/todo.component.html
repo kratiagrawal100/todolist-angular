@@ -1,0 +1,25 @@
+<!-- <div class="card" style="width: 18rem;float:left;margin-left:12px;margin-top:10px;" *ngFor=" let todo of todo" >
+    <img src="..." class="card-img-top" alt="..."> 
+    <div class="card-body" >
+        <h5 class="card-title">{{todo.title}}</h5>
+        <p class="card-text">{{todo.description}}.</p>
+        <a href="#" class="btn btn-outline-success">Active</a>
+    </div>
+</div> -->
+<div class="container">
+    <div class="row">
+<div class="col-4" style="margin-left:-55px;" >
+<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+</div>
+<div class="col" style="margin-left:1px;margin-top:0px;">
+<div  *ngIf="this.todo.length===0; else elseBlock" style="margin-left:2px;">No todos to display</div>
+<ng-template #elseBlock>
+<div *ngFor="let todo of todo" style="margin-left:2px;">
+    <app-to-do-item [todo]="todo" (todoDelete)="deleteTodo($event)" (todoCheck)="checkedTodo($event)"></app-to-do-item>
+</div>
+</ng-template>
+</div>
+</div>
+</div>
+
+

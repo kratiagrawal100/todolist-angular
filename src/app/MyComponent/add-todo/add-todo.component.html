@@ -1,0 +1,21 @@
+<div class="container" style="width:fit-content;margin-left:2px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+            <label for="inputName" class="col-sm-1-12 col-form-label">Title</label>
+            <div class="col-sm-1-12">
+                <input type="text" class="form-control" [(ngModel)]="title" name="title" id="inputName" placeholder="Enter the title">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputName" class="col-sm-1-12 col-form-label">Description</label>
+            <div class="col-sm-1-12">
+                <input type="text" class="form-control" [(ngModel)]="desc" name="desc" id="inputName" placeholder="Enter the Description">
+            </div>
+        </div>
+        <div class="form-group row" style="margin-top:10px;">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Add To-Do</button>
+            </div>
+        </div>
+    </form>
+</div>

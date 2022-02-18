@@ -1,0 +1,12 @@
+<div class="card" style="width: 15rem;float:left;margin-left:12px;margin-top:10px;" id="card{{todo.sno}}" style="color:'{{generatecolor(todo)}}'">
+    <div class="card-body">
+        <h5 class="card-title">To-Do No.:{{todo.sno}}</h5>
+        <h5 class="card-title" [ngClass]="{'strike':!todo.active}">{{todo.title}}</h5>
+        <p class="card-text">{{todo.description}}.</p>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (click)="onCheckbox(todo)" [checked]="!todo.active">
+            <label class="form-check-label" for="flexCheckDefault">Done</label>
+        </div>
+        <a href="#" class="btn btn-outline-danger" (click)="onClick(todo)">Delete</a>
+    </div>
+</div>
